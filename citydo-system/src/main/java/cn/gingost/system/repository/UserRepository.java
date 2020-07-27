@@ -1,6 +1,6 @@
 package cn.gingost.system.repository;
 
-import cn.gingost.system.domain.User;
+import cn.gingost.system.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 

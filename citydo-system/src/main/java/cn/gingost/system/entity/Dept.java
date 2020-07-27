@@ -1,7 +1,9 @@
-package cn.gingost.system.domain;
+package cn.gingost.system.entity;
 
 import cn.gingost.base.BaseEntity;
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
+import org.hibernate.annotations.Where;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
@@ -13,9 +15,11 @@ import java.util.Set;
  * @Date:2020/7/24 17:48
  */
 
-@Data
+@Getter
+@Setter
 @Entity
 @Table(name = "dept")
+@Where(clause = "is_delete=0")
 public class Dept extends BaseEntity {
 
     @Column(name = "nick_name")
@@ -28,5 +32,8 @@ public class Dept extends BaseEntity {
 
     @OneToMany(mappedBy = "dept",cascade = CascadeType.MERGE)
     private Set<User> users;
+
+    @Column(name = "u_id")
+    private Long uId;
 
 }

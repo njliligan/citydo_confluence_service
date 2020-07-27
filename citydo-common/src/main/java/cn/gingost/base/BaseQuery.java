@@ -15,15 +15,15 @@ import java.util.Collection;
 public class BaseQuery {
 
     @Query
-    private Long id;
+    public Long id;
 
     @Query(type = Query.Type.IN,propName = "id")
-    private Collection<Long> ids;
+    public Collection<Long> ids;
 
     @Query(type = Query.Type.BETWEEN)
-    private Collection<Timestamp> createTime;
+    public Collection<Timestamp> createTime;
 
     @Query(type = Query.Type.BETWEEN)
-    private Collection<Timestamp> updateTime;
+    public Collection<Timestamp> updateTime;
 
 }
