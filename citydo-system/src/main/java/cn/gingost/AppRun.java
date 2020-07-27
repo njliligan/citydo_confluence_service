@@ -3,6 +3,7 @@ package cn.gingost;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
  * @author:lezzy
@@ -10,6 +11,7 @@ import org.springframework.web.bind.annotation.GetMapping;
  */
 
 @SpringBootApplication
+@RestController
 public class AppRun {
     public static void main(String[] args) {
         SpringApplication.run(AppRun.class);
@@ -17,6 +19,6 @@ public class AppRun {
 
     @GetMapping("/")
     public String index(){
-        return "citydo confluence service is running";
+        return "citydo confluence service is running success";
     }
 }
