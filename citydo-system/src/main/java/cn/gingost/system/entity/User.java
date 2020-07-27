@@ -58,5 +58,6 @@ public class User extends BaseEntity {
     private Set<Role> roles;
 
     @OneToOne(cascade = CascadeType.MERGE,fetch = FetchType.EAGER)
+    @JoinColumn(name = "job_id")
     private Job job;
 }
